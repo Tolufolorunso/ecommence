@@ -327,6 +327,7 @@ small,
 .products-section {
     width: 100%;
     margin-top: 80px;
+    margin-bottom: 60px;
 }
 
 .products-heading {
@@ -348,6 +349,10 @@ small,
     margin: 10px 0 60px 0;
 }
 
+.products-heading h4 {
+    text-transform: capitalize;
+}
+
 .products-heading a {
     font-size: 0.8rem;
     text-align: center;
@@ -357,7 +362,124 @@ small,
 }
 
 .products {
+    max-width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    gap: 30px;
+}
+
+@media (max-width: 850px) {
+    .products {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+}
+
+.products-item {
+    border: 1px solid #ccc;
+}
+
+.image {
+    width: 100%;
+    position: relative;
+}
+
+.products-item img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    opacity: 1;
+    display: block;
+    height: auto;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: 0.5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.products-item a:hover .image {
+    opacity: 0.3;
+}
+
+.products-item a:hover .middle {
+    opacity: 1;
+}
+
+.products-item .text {
+    background-color: var(--colorPrimaryHover);
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    text-transform: capitalize;
+}
+
+.products-item .title-price {
+    padding: 20px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.products-item h5 {
+    text-transform: capitalize;
+    color: #777;
+}
+
+.products-item p {
+    padding: 0px 15px;
+}
+
+.products-item .icon-review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+    padding-bottom: 30px;
+}
+
+.products-item .icon-review p {
+    color: var(--colorPrimary);
+}
+
+.products-item .stars {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.products-item .stars .fa-star {
+    color: var(--colorPrimary);
+}
+
+footer {
+    width: 100%;
+    background-color: var(--bgOffBlack);
+}
+
+footer .top-bar {
+    height: 200px;
+    width: 100%;
+}
+
+footer .bottom-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--bgBlack);
+    color: var(--white);
 }
