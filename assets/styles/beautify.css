@@ -449,7 +449,7 @@ small,
     padding-bottom: 15px;
 }
 
-.products-item .icon-review p {
+.products-item .icon-review span {
     color: var(--colorPrimary);
 }
 
