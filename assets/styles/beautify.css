@@ -1,0 +1,363 @@
+:root {
+    --colorPrimary: #eb4800;
+    --colorPrimaryHover: #802701;
+    --bgOffBlack: #242424;
+    --bgBlack: #000000;
+    --white: #fff;
+    --fontHeading: 'PT Sans', sans-serif;
+    --font: 'Actor', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Actor:400|PT+Sans:400');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+
+/*16px*/
+
+body {
+    background: white;
+    font-family: var(--font);
+    font-weight: 400;
+    line-height: 1.75;
+    color: #000000;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+    font-family: var(--fontHeading);
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 3.052rem;
+}
+
+h2 {
+    font-size: 2.441rem;
+}
+
+h3 {
+    font-size: 1.953rem;
+}
+
+h4 {
+    font-size: 1.563rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+small,
+.text_small {
+    font-size: 0.8rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 1199px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.active {
+    color: var(--colorPrimary);
+}
+
+
+/* @media (max-width: 950px) {
+    .container {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin: 0 auto;
+    }
+} */
+
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: var(--bgOffBlack);
+    display: flex;
+    align-items: center;
+}
+
+.hambuger {
+    display: none;
+    background-color: var(--white);
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.navbar {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.logo h3 {
+    color: var(--white);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.logo h3 span {
+    color: var(--colorPrimary);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 10px 20px;
+    align-items: center;
+}
+
+.navbar ul a,
+.mobile-nav ul a {
+    color: var(--white);
+    font-size: 1.1rem;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.mobile-nav {
+    position: absolute;
+    transform: translate(-300px, 0);
+    transition: transform 0.3s ease;
+    background-color: white;
+    max-width: 230px;
+    height: 100%;
+    width: 70%;
+    z-index: 2199;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.mobile-nav ul li {
+    width: 100%;
+}
+
+.mobile-nav ul a {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 30px;
+    color: var(--color_primary);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav ul a:hover {
+    background-color: var(--colorPrimary);
+    color: #fff;
+    text-decoration: underline;
+    width: 100%;
+}
+
+.mobile-nav.open {
+    transform: translate(0, 0);
+}
+
+@media (max-width: 960px) {
+    .hambuger {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar ul {
+        display: none;
+    }
+    .logo h3 {
+        font-weight: 400;
+        letter-spacing: 2px;
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo h3 {
+        font-weight: 300;
+        letter-spacing: 1px;
+        font-size: 1.3rem;
+    }
+}
+
+.hero-section {
+    position: relative;
+    height: calc(100vh - 80px);
+    min-height: calc(450px - 80px);
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/houseedit6.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 2px 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    color: var(--colorPrimary);
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.hero-content h3 {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 4rem;
+    text-transform: capitalize;
+}
+
+.hero-content p {
+    color: var(--white);
+    font-weight: 400;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+}
+
+.hero-content .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.hero-content .btn a {
+    background: var(--colorPrimary);
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #bcc3c7;
+    font-size: 1rem;
+    padding: 10px 30px;
+    border-radius: 3px;
+    letter-spacing: 2px;
+    transition: all 0.3 ease;
+}
+
+.hero-content .btn a:hover {
+    background: var(--colorPrimaryHover);
+    color: #fff;
+}
+
+@media (max-width: 960px) {
+    .hero-content h3 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .hero-content h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-content h1 {
+        font-size: 1.3rem;
+    }
+    .hero-content h3 {
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+}
+
+
+/* ######################### 
+ Products style rule 
+ ######################### */
+
+.products-section {
+    width: 100%;
+    margin-top: 80px;
+}
+
+.products-heading {
+    width: 100%;
+}
+
+.products-heading__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.products-heading::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #ccc;
+    margin: 10px 0 60px 0;
+}
+
+.products-heading a {
+    font-size: 0.8rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--colorPrimary);
+}
+
+.products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
