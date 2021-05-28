@@ -94,6 +94,25 @@ small,
     color: var(--colorPrimary);
 }
 
+.nav-location__section {
+    width: 100%;
+    background-color: var(--colorPrimary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+}
+
+.nav-location {
+    color: var(--white);
+    display: flex;
+    align-items: center;
+}
+
+.nav-location a {
+    color: var(--white);
+    font-weight: 600;
+}
+
 
 /* @media (max-width: 950px) {
     .container {
@@ -382,6 +401,7 @@ small,
 
 .products-item {
     border: 1px solid #ccc;
+    border-radius: 3px;
 }
 
 .image {
@@ -408,6 +428,8 @@ small,
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
+    display: flex;
+    gap: 0 3px;
 }
 
 .products-item a:hover .image {
