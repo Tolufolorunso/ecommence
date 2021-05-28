@@ -88,10 +88,32 @@
     .products {
         grid-template-columns: repeat(2, 1fr);
     }
+    .products-hero h1 {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    .products-hero h3 {
+        font-size: 2.3rem;
+        font-weight: 400;
+    }
 }
 
 @media (max-width: 650px) {
     .products {
         grid-template-columns: 1fr;
+    }
+    .products-hero h1 {
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+    .products-hero h3 {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    .pagination_section ul.pages li a {
+        line-height: 30px;
+        font-size: 13px;
+        font-weight: 500;
+        padding: 0 15px;
     }
 }
