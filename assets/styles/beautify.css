@@ -102,6 +102,8 @@ small,
     color: var(--white);
     display: flex;
     align-items: center;
+    padding: 10px 0;
+    letter-spacing: 3px;
 }
 
 .nav-location a {
@@ -398,6 +400,18 @@ small,
 .products-item {
     border: 1px solid #ccc;
     border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.products-item:hover {
+    overflow: hidden;
+    transform: scale(1.1);
 }
 
 .image {
@@ -414,6 +428,10 @@ small,
     height: auto;
     transition: 0.5s ease;
     backface-visibility: hidden;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
 }
 
 .middle {
@@ -482,6 +500,20 @@ small,
     color: var(--colorPrimary);
 }
 
+.veiw-detail {
+    padding: 0 0 10px 10px;
+}
+
+.veiw-detail a {
+    text-decoration: none;
+    color: var(--colorPrimary);
+    font-size: 1.1rem;
+}
+
+.veiw-detail a span {
+    font-size: 1.3rem;
+}
+
 footer {
     width: 100%;
     background-color: var(--bgOffBlack);
@@ -500,4 +532,10 @@ footer .bottom-bar {
     padding: 10px;
     background-color: var(--bgBlack);
     color: var(--white);
+}
+
+padding: 10px;
+background-color: var(--bgBlack);
+color: var(--white);
+
 }
